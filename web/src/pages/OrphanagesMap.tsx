@@ -19,7 +19,7 @@ function OrphanagesMap () {
         </header>
 
         <footer>
-          <strong>Florianopólis</strong>
+          <strong>Florianópolis</strong>
           <span>Santa Catarina</span>
         </footer>
       </aside>
