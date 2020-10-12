@@ -25,12 +25,10 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
 
 
 ## :email: Faq
+- Reactjs
+- Typescript
+- Nodejs
 - HTML
-- CSS
-- Javascript
-- Nunjucks
-- Nodejs 
-- Postgres
 
     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
