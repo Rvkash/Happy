@@ -21,6 +21,11 @@ Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevel
 
 
 
+## :rocket: Tecnologias
+- Reactjs
+- Typescript
+- Nodejs
+- HTML
 
 
 
@@ -39,13 +44,6 @@ Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
 
 
 
-
-
-## :email: Faq
-- Reactjs
-- Typescript
-- Nodejs
-- HTML
 
     
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------
