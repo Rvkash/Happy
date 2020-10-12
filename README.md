@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="https://i.ibb.co/MNVn33d/v2.png" width="800px" />
+    <img src="" width="800px" />
 </h1>
 
 
