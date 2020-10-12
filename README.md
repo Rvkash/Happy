@@ -10,6 +10,14 @@
 
 <blockquote align="center">“Há coisas na vida que só dependem da nossa vontade, e ser criança é uma delas, Faça uma criança feliz!”</blockquote>
 
+## Happy
+
+O Happy é um projeto que visa facilitar visitas aos orfanatos próximos a você :blue_heart:
+
+Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevelweek.com/inscricao/3) da [Rocketseat](github.com/Rocketseat)
+
+
+
 ## ⌨ Como executar o projeto
 ```bash
 # Clonar o repositório
