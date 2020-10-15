@@ -25,7 +25,7 @@ Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevel
 - Reactjs
 - Typescript
 - Nodejs
-- Raact-native
+- React-native
 
 
 
