@@ -3,7 +3,7 @@
 </h1>
 
 <h3 align="center">
-  Happy - Next Level Week #03 Edition
+  Happy
 </h3>
 
 <blockquote align="center">“Há coisas na vida que só dependem da nossa vontade, e ser criança é uma delas, Faça uma criança feliz!”</blockquote>
