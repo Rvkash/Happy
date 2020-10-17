@@ -30,7 +30,7 @@ Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevel
 </h1>
 
 
-## :cell: Tecnologias
+## :robot: Tecnologias
 - Reactjs
 - Typescript
 - Nodejs
