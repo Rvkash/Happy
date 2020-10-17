@@ -1,5 +1,5 @@
 import { Request, Response} from 'express'
-import { getRepository } from 'typeorm'
+import { getConnection, getRepository } from 'typeorm'
 import * as Yup from 'yup'
 
 import orphanageView from '../views/orphanages_view'
@@ -58,6 +58,7 @@ export default {
         images
       }
 
+
       const schema = Yup.object().shape({
         name: Yup.string().required(),
         latitude: Yup.number().required(),
@@ -80,6 +81,6 @@ export default {
       await orphanagesRepository.save(orphanage)
 
       return response.status(201).json(orphanage)
-    }
-  }
+  },
+}
 
