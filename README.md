@@ -1,8 +1,3 @@
-<h1 align="center">
-    <img src="https://i.ibb.co/545cM3v/happy.png" width="800px" />
-</h1>
-
-
 <h3 align="center">
   Happy - Next Level Week #03 Edition
 </h3>
@@ -18,6 +13,16 @@
 O Happy é um projeto que visa facilitar visitas aos orfanatos próximos a você.
 
 Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevelweek.com/inscricao/3) da [Rocketseat](https://github.com/Rocketseat)
+
+## :🌎: Web
+<h1 align="center">
+    <img src="https://i.ibb.co/7Gtjgbt/happy.png" width="800px" />
+</h1>
+
+<h1 align="center">
+    <img src="https://i.ibb.co/FmYDJkc/Captura-de-tela-2020-10-16-21-23-24.png" width="800px" />
+</h1>
+
 
 ## 📱 Mobile
 
