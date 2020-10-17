@@ -5,12 +5,12 @@ import { useHistory } from 'react-router-dom'
 import { useState, FormEvent, ChangeEvent } from 'react'
 import { FiPlus } from 'react-icons/fi'
 import { LeafletMouseEvent } from 'leaflet'
+  
+import './styles.css'
 
-import '../styles/pages/create-orphanage.css'
-
-import Sidebar from '../components/Sidebar'
-import api from '../services/api'
-import mapIcon from '../utils/mapIcon'
+import Sidebar from '../../components/Sidebar'
+import api from '../../services/api'
+import mapIcon from '../../utils/mapIcon'
 
 
 export default function CreateOrphanage () {
@@ -39,7 +39,7 @@ export default function CreateOrphanage () {
       return
     }
 
-  const selectedImages = Array.from(e.target.files)
+  const selectedImages = images.concat(Array.from(e.target.files))
 
     setImages(selectedImages)
 
@@ -47,8 +47,10 @@ export default function CreateOrphanage () {
       return URL.createObjectURL(image)
     })
 
+    
     setPreviewImages(selectedImagesPreview)
   }
+
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault()

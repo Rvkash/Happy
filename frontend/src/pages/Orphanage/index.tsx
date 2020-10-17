@@ -4,10 +4,10 @@ import { FiClock, FiInfo, FiArrowLeft, FiXCircle } from 'react-icons/fi'
 import { Map, Marker, TileLayer } from 'react-leaflet'
 import { useParams} from 'react-router-dom'
 
-import '../styles/pages/orphanage.css'
-import Sidebar from '../components/Sidebar'
-import api from '../services/api'
-import mapIcon from '../utils/mapIcon'
+import './styles.css'
+import Sidebar from '../../components/Sidebar'
+import api from '../../services/api'
+import mapIcon from '../../utils/mapIcon'
 
 interface Orphanage {
   latitude: number;
@@ -42,7 +42,7 @@ export default function Orphanage () {
       if(!orphanage) {
         return <p>Carregando...</p>
       }
-      
+
   return (
     <div id='page-orphanage'>
       <Sidebar />
@@ -125,12 +125,6 @@ export default function Orphanage () {
               Entrar em contato
             </button>
 
-            <button type='submit' className='delete' form='form-delete'>
-             <FiXCircle size={20} color='#FFF' />
-              Excluir {orphanage.name}
-            </button>
-
-            <form id='form-delete' method="POST"></form>
           </div>
         </div>
       </main> 

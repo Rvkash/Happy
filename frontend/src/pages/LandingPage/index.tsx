@@ -1,8 +1,8 @@
 import React from 'react'
-import '../styles/pages/landing.css'
-import Logo from '../images/logo.svg'
+import './styles.css'
+import Logo from '../../images/logo.svg'
 import { Link } from 'react-router-dom'
-import { FiArrowRight } from 'react-icons/fi'
+import { FiLogIn, FiMap, FiCheck } from 'react-icons/fi'
 
 function Landing () {
   return (
@@ -20,9 +20,15 @@ function Landing () {
           <span>Santa Catarina</span>
         </div>
 
-        <Link to='/app' className='enter-app'>
-          <FiArrowRight size={26} color='rgba(0, 0, 0, 0.6)' />
-        </Link>
+        <div className='nav-bottom'>
+          <Link to='/signin' className='login'>
+            <FiLogIn size={26} color='rgba(0, 0, 0, 0.6)' />
+          </Link>
+
+          <Link to='/app' className='enter-app'>
+            <FiMap size={26} color='rgba(0, 0, 0, 0.6)' />
+          </Link>
+        </div>
       </div>
     </div>
   )
