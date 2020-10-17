@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
-import { FiClock, FiInfo, FiArrowLeft } from 'react-icons/fi'
+import { FiClock, FiInfo, FiArrowLeft, FiXCircle } from 'react-icons/fi'
 import { Map, Marker, TileLayer } from 'react-leaflet'
 import { useParams} from 'react-router-dom'
 
@@ -124,9 +124,16 @@ export default function Orphanage () {
               <FaWhatsapp size={20} color='#FFF' />
               Entrar em contato
             </button>
+
+            <button type='submit' className='delete' form='form-delete'>
+             <FiXCircle size={20} color='#FFF' />
+              Excluir {orphanage.name}
+            </button>
+
+            <form id='form-delete' method="POST"></form>
           </div>
         </div>
-      </main>
+      </main> 
     </div>
   )
 }
