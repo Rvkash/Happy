@@ -53,6 +53,8 @@ Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevel
 git clone https://github.com/Rvkash/Happy
 # Entrar no diretório
 cd Happy
+cd frontend
+ou cd backend 
 # Baixar as dependências
 npm install
 # Executar o servidor
