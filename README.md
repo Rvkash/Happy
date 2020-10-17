@@ -43,6 +43,7 @@ Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevel
 - Typescript
 - Nodejs
 - React-native
+- Typeorm
 
 
 
