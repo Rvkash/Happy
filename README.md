@@ -19,9 +19,18 @@ O Happy é um projeto que visa facilitar visitas aos orfanatos próximos a você
 
 Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevelweek.com/inscricao/3) da [Rocketseat](https://github.com/Rocketseat)
 
+## 📱 Mobile
+
+<h1 align="center">
+    <img src="https://i.ibb.co/d08dyKf/photo4922844489534515576.jpg" width="300px" />
+</h1>
+
+<h1 align="center">
+    <img src="https://i.ibb.co/6bSqs4Y/photo4922844489534515574.jpg" width="300px" />
+</h1>
 
 
-## :rocket: Tecnologias
+## :cell: Tecnologias
 - Reactjs
 - Typescript
 - Nodejs
