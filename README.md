@@ -63,7 +63,8 @@ ou cd backend
 # Baixar as dependências
 npm install
 # Executar o servidor
-npm start
+npm start frontend
+yarn dev backend
 ```
 Feito isso, abra o seu navegador e acesse `http://localhost:5500/`
 
