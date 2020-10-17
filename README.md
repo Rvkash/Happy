@@ -1,7 +1,10 @@
+<h1 align="center">
+    <img src="https://i.ibb.co/Xk4S7kW/Logo.png" width="198" />
+</h1>
+
 <h3 align="center">
   Happy - Next Level Week #03 Edition
 </h3>
-
 
 <blockquote align="center">“Há coisas na vida que só dependem da nossa vontade, e ser criança é uma delas, Faça uma criança feliz!”</blockquote>
 
