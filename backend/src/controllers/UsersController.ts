@@ -3,7 +3,7 @@ import { getConnection, getRepository } from 'typeorm'
 import * as Yup from 'yup'
 
 import userView from '../views/users_view'
-import User from '../models/user'
+import User from '../models/User'
 
 export default {
 	async index(request: Request , response: Response) {
@@ -12,7 +12,7 @@ export default {
     })
 
     return response.json(userView.renderMany(users))
-
+    
 
 	},
 	async show(request: Request , response: Response) {
@@ -20,19 +20,15 @@ export default {
 		const usersRepository = getRepository(User)
 
 		const user = await usersRepository.findOneOrFail(id, {
+
     })
 
 		return response.json(userView.render(user))
 
 	},
   async create(request: Request , response: Response) {
-    console.log(request.files)
 
-      const {
-        name,
-        email,
-        senha,
-      } = request.body
+      const {  name, email, senha } = request.body
 
       const usersRepository = getRepository(User)
 
@@ -40,14 +36,13 @@ export default {
       const data = {
         name,
         email,
-        senha,
+        senha
       }
-
 
       const schema = Yup.object().shape({
         name: Yup.string().required(),
         email: Yup.string().required(),
-        senha: Yup.number().required(),
+        senha: Yup.string().required(),
       })
 
       await schema.validate(data, {
