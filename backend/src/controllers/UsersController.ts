@@ -27,22 +27,24 @@ export default {
 
 	},
   async create(request: Request , response: Response) {
-
-      const {  name, email, senha } = request.body
+      const {  
+        name, 
+        email,
+        password
+      } = request.body
 
       const usersRepository = getRepository(User)
-
 
       const data = {
         name,
         email,
-        senha
+        password
       }
 
       const schema = Yup.object().shape({
         name: Yup.string().required(),
         email: Yup.string().required(),
-        senha: Yup.string().required(),
+        password: Yup.string().min(6).required(),
       })
 
       await schema.validate(data, {
