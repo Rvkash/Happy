@@ -1,11 +1,14 @@
 import React from 'react'
-import './styles/global.css'
+import GlobalStyle from './styles/global'
 import 'leaflet/dist/leaflet.css'
 import Routes from './routes'
 
-function App () {
+const App = () => {
   return (
-    <Routes />
+    <div className='app'>
+      <GlobalStyle />
+      <Routes />
+    </div>
   )
 }
 
