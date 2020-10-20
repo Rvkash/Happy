@@ -18,7 +18,7 @@ function Routes () {
 
         <Route path='/orphanages/create' component={createOrphanage} />
         <Route path='/orphanages/:id' component={Orphanage} />
-        <Route path='/signin' component={SignIn} />
+        <Route path='/login' component={SignIn} />
       </Switch>
     </BrowserRouter>
   )
