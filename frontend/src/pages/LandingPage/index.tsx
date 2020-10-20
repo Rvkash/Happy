@@ -2,7 +2,7 @@ import React from 'react'
 import './styles.css'
 import Logo from '../../images/logo.svg'
 import { Link } from 'react-router-dom'
-import { FiLogIn, FiMap, FiCheck } from 'react-icons/fi'
+import { FiLogIn, FiMap } from 'react-icons/fi'
 
 function Landing () {
   return (
@@ -21,7 +21,7 @@ function Landing () {
         </div>
 
         <div className='nav-bottom'>
-          <Link to='/signin' className='login'>
+          <Link to='/login' className='login'>
             <FiLogIn size={26} color='rgba(0, 0, 0, 0.6)' />
           </Link>
 
