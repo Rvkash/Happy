@@ -13,7 +13,7 @@ export default class User {
 	email: string;
 
 	@Column()
-	senha: string;
+	password: string;
 
 }
 
