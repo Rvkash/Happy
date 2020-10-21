@@ -7,7 +7,7 @@
 
 
 
-## :blue_heart: Happy
+## :blue_heart: Happy Version 2
 
 O Happy é um projeto que visa facilitar visitas aos Acolhimentos Institucionais próximos a você.
 
