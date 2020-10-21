@@ -1,5 +1,7 @@
 import { Request, Response} from 'express'
 import { getConnection, getRepository } from 'typeorm'
+import crypto from 'crypto'
+
 import * as Yup from 'yup'
 
 import userView from '../views/users_view'
@@ -10,6 +12,10 @@ export default {
 		const usersRepository = getRepository(User)
 		const users = await usersRepository.find({
     })
+
+    if(!users){
+      return response.status(400).json({ error: 'usuário não existe'})
+    }
 
     return response.json(userView.renderMany(users))
     
@@ -25,36 +31,50 @@ export default {
 
 		return response.json(userView.render(user))
 
-	},
+	},                      
   async create(request: Request , response: Response) {
-      const {  
-        name, 
-        email,
-        password
-      } = request.body
+    const {  
+      name, 
+      email,
+    } = request.body
+    
+    const password = crypto.randomBytes(4).toString('hex');
+    
+    const usersRepository = await getRepository(User)
+    
+    const data = {
+      name,
+      email,
+      password
+    }
+    
+    const schema = Yup.object().shape({
+      name: Yup.string().required(),
+      email: Yup.string().required(),
+      password: Yup.string().min(6).required(),
+    })
 
-      const usersRepository = getRepository(User)
+    await schema.validate(data, {
+      abortEarly: false,
+    })
 
-      const data = {
-        name,
-        email,
-        password
-      }
+    const user = usersRepository.create(data)
 
-      const schema = Yup.object().shape({
-        name: Yup.string().required(),
-        email: Yup.string().required(),
-        password: Yup.string().min(6).required(),
-      })
+    await usersRepository.save(user)
 
-      await schema.validate(data, {
-        abortEarly: false,
-      })
-
-      const user = usersRepository.create(data)
-
-      await usersRepository.save(user)
-
-      return response.status(201).json(user)
+    return response.status(201).json(user)
   },
+  async delete(request: Request , response: Response) {
+    const { id } = request.params
+
+     await getConnection()
+    .createQueryBuilder()
+    .delete()
+    .from(User)
+    .where("id = :id", {id})
+    .execute();
+
+
+    return response.json(User) 
+  }
 }
