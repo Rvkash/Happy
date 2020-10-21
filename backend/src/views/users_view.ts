@@ -6,7 +6,7 @@ export default {
 			"id": user.id,
 			"name": user.name,
 			"email": user.email,
-			"senha": user.senha
+			"password": user.password
 		}
 	},
 
