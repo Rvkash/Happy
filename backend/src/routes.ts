@@ -1,6 +1,9 @@
 import { Router } from 'express'
 import multer from 'multer'
 import uploadConfig from './config/upload'
+
+import SessionsController from './controllers/SessionsController'
+
 import OrphanagesController from './controllers/OrphanagesController'
 import UsersController from './controllers/UsersController'
 // Index = List
@@ -17,5 +20,8 @@ routes.post('/orphanages', upload.array('images'), OrphanagesController.create)
 routes.get('/users', UsersController.index)
 routes.get('/users/:id', UsersController.show)
 routes.post('/users', UsersController.create)
+routes.delete('/users/:id', UsersController.delete)
+
+routes.post('/sessions', SessionsController.create)
 
 export default routes
