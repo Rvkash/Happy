@@ -21,7 +21,7 @@ function Landing () {
         </div>
 
         <div className='nav-bottom'>
-          <Link to='/login' className='login'>
+          <Link to='/register' className='login'>
             <FiLogIn size={26} color='rgba(0, 0, 0, 0.6)' />
           </Link>
 
