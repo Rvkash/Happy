@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from 'react'
 import { FaWhatsapp } from 'react-icons/fa'
-import { FiClock, FiInfo } from 'react-icons/fi'
+import { FiClock, FiInfo, FiTrash2 } from 'react-icons/fi'
 import { Map, Marker, TileLayer } from 'react-leaflet'
-import { useParams} from 'react-router-dom'
+import { useHistory, useParams} from 'react-router-dom'
 
 import './styles.css'
 import Sidebar from '../../components/Sidebar'
 import api from '../../services/api'
 import mapIcon from '../../utils/mapIcon'
 
+
+
 interface Orphanage {
+  id: number;
   latitude: number;
   longitude: number;
   name: string;
@@ -29,20 +32,34 @@ interface OrphanageParams {
 
 
 export default function Orphanage () {
+  const history = useHistory()  
+
   const params = useParams<OrphanageParams>()
     const [orphanage, setOrphanage] = useState<Orphanage>()
     const [activeImageIndex, setActiveImageIndex] = useState(0)
     
-      useEffect(() => {
-      api.get(`orphanages/${params.id}`).then(response => {
-      setOrphanage(response.data)
-      })
-      }, [])
+  useEffect(() => {
+  api.get(`orphanages/${params.id}`).then(response => {
+  setOrphanage(response.data)
+  })
+  }, [])
 
-      if(!orphanage) {
-        return <p>Carregando...</p>
-      }
+  if(!orphanage) {
+    return <p>Carregando...</p>
+  }
 
+  async function handleDeleteOrphanage(id: any) {
+    alert('Deletado')
+    try{
+      await api.delete(`orphanages/${id}`)
+    } catch(err) {
+      alert('erro ao deletar')
+    }
+    history.push('/app')
+
+  }
+
+  
   return (
     <div id='page-orphanage'>
       <Sidebar />
@@ -123,6 +140,14 @@ export default function Orphanage () {
             <button type='button' className='contact-button'>
               <FaWhatsapp size={20} color='#FFF' />
               Entrar em contato
+            </button>
+
+            <button 
+            type='button' 
+            className='delete'
+            onClick={() => handleDeleteOrphanage(orphanage.id)}>
+            <FiTrash2 size={20} color='#FFF' />
+            Excluir
             </button>
 
           </div>
