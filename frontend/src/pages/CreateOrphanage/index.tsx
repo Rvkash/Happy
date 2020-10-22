@@ -66,15 +66,15 @@ export default function CreateOrphanage () {
     data.append('instructions', instructions);
     data.append('open_on_weekends', String(open_on_weekends));
 
-      images.forEach(image => {
-        data.append('images', image)
-      })
+    images.forEach(image => {
+      data.append('images', image)
+    })
 
-      await api.post('/orphanages', data)
-      alert('Cadastro realizado')
+    await api.post('/orphanages', data)
+    alert('Cadastro realizado')
 
-      history.push('/app')
-    }
+    history.push('/app')
+  }
 
   return (
     <div id='page-create-orphanage'>
@@ -84,7 +84,8 @@ export default function CreateOrphanage () {
         <form onSubmit={handleSubmit} className='create-orphanage-form'>
           <fieldset>
             <legend>Dados</legend>
-
+            <h1> Selecione um local no mapa </h1>
+    
             <Map
               center={[-27.6594698, -48.6712079]}
               style={{ width: '100%', height: 280 }}
@@ -92,14 +93,14 @@ export default function CreateOrphanage () {
               onClick={handleMapClick}
             >
               <TileLayer
-                url={`https://api.mapbox.com/styles/v1/mapbox/light-v10/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
+                url={`https://api.mapbox.com/styles/v1/mapbox/dark-v2/tiles/256/{z}/{x}/{y}@2x?access_token=${process.env.REACT_APP_MAPBOX_TOKEN}`}
               />
 
               { position.latitude != 0 
               ? <Marker interactive={false} icon={mapIcon} position={[position.latitude, position.longitude]} />
               :null }
             </Map>
-
+             
             <div className='input-block'>
               <label htmlFor='name'>Nome</label>
               <input 
@@ -119,16 +120,16 @@ export default function CreateOrphanage () {
               />
             </div>
 
-            <div className='input-block'>
+            <div className='input-block' >
               <label htmlFor='images'>Fotos</label>
-
-              <div className='images-container'>
+              <div  className='images-container'>
                 {previewImages.map((image) => {
                   return <img key={image} src={image} alt={name} /> 
                 })}
 
                 <label htmlFor="image[]" className='new-image'>
                 <FiPlus size={24} color='#15b6d6' />
+                
               </label>
             </div>
 
@@ -178,7 +179,8 @@ export default function CreateOrphanage () {
               </div>
             </div>
           </fieldset>
-
+            
+            
           <button className='confirm-button' type='submit'>
             Confirmar
           </button>

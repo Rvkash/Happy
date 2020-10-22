@@ -86,12 +86,12 @@ form.create-orphanage-form .input-block+.input-block {
   margin-top: 24px;
 }
 
-form.create-orphanage-form .input-block label {
+form.create-orphanage-form .input-block label, h1{
   display: flex;
-  color: #8FA7B3;
-
+  color: #7d9baa;
+  font-size: 24px;
   margin-top: 22px;
-  margin-bottom: 8px;
+  margin-bottom: 20px;
   line-height: 24px;
 }
 
