@@ -16,12 +16,14 @@ export default function Login () {
     try{
       const response = await api.post('/sessions', {password} )
 
+      localStorage.setItem('userPass', password)
+
       console.log(response.data.password)
     } catch(err) {
       alert('Falha na validação')
       
     }
-      history.push('/login')
+      history.push('/dashboard')
        
   }
 
