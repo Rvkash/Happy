@@ -8,7 +8,6 @@ import OrphanagesController from './controllers/OrphanagesController'
 import UsersController from './controllers/UsersController'
 
 // Index = List //
-
 const routes = Router()
 const upload = multer(uploadConfig)
 
