@@ -67,7 +67,7 @@ export default {
         instructions: Yup.string().required(),
         opening_hours: Yup.string().required(),
         open_on_weekends: Yup.boolean().required(),
-        images: Yup.array(Yup.object().shape({
+        images: Yup.array(Yup.object().required().shape({
           path: Yup.string().required()
         }))
       })
@@ -82,5 +82,18 @@ export default {
 
       return response.status(201).json(orphanage)
   },
+  async delete(request: Request, response: Response) {
+    const { id } = request.params
+    
+     await getConnection()
+    .createQueryBuilder()
+    .delete()
+    .from(Orphanage)
+    .where("id = :id", {id})
+    .execute();
+
+
+    return response.json(Orphanage) 
+  }
 }
 
