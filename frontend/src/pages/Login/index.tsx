@@ -1,14 +1,35 @@
-import React, { useState } from 'react'
-import { useHistory } from 'react-router-dom'
+import React, { useEffect, useState } from 'react'
+import { useHistory, useParams } from 'react-router-dom'
 
 import Sidebar from '../../components/Sidebar'
 
 import './styles.css'
 import api from '../../services/api'
 
+
+interface UserParams {
+  id: string,
+  name: string,
+  email: string
+}
+
+interface User {
+  id: number,
+
+}
+
 export default function Login () {
   const history = useHistory()  
+  const params = useParams<UserParams>()
+
+  const [user, setUser] = useState('')
   const [password, setPassword] = useState('')
+
+  useEffect(() => {
+    api.get('/users').then(response => {
+    setUser(response.data)
+    })
+    }, [])
 
   async function handleLogin (e: any) {
     e.preventDefault()
@@ -23,7 +44,7 @@ export default function Login () {
       alert('Falha na validação')
       
     }
-      history.push('/dashboard')
+      history.push('/profile')
        
   }
 

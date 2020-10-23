@@ -8,6 +8,7 @@ import OrphanagesMap from './pages/OrphanagesMap'
 
 import Login from './pages/Login'
 import Register from './pages/Register'
+import Profile from './pages/Profile'
 
 function Routes () {
   return (
@@ -22,6 +23,8 @@ function Routes () {
 
         <Route path='/login' component={Login} />
         <Route path='/register' component={Register} />
+        <Route path='/profile/:id' component={Profile} />
+
       </Switch>
     </BrowserRouter>
   )

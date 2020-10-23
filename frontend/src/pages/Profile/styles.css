@@ -1,0 +1,166 @@
+#container .form{
+	flex: 1
+}
+
+#container .form {
+	width: 1000px;
+  margin: 66px auto;
+
+  background: #FFFFFF;
+  border: 1px solid #D3E2E5;
+  border-radius: 20px;
+
+  padding: 20px 80px;
+
+  overflow: hidden;
+}
+
+#container .my-perfil h1 {
+	padding: 10px;
+	margin: 0;
+}
+
+#container .form .avatar {
+	display: flex;
+	background: rgb(255, 255, 255);
+	align-items: center;
+	text-align: center;
+}
+
+#container .form .avatar img{
+	display: flex;
+	border: 4px solid #59f06d;
+	width: 150px;
+	margin-top: 12px;
+	margin-right: 12px;
+
+	padding: 0;
+	border-radius: 100px;
+}
+
+
+#container .form .avatar h1 {
+	margin: 22px;
+	display: flex;
+	margin: 0;
+	border-bottom: 1px solid #59f06d;
+}
+
+#container .form .avatar p {
+	color:#858888;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-left: 60px;
+}
+
+.institution {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-content: space-between;
+}
+
+.institution h1 {
+	font-size: 16px;
+	margin: 10px 0 0 ;
+	display: flex;
+	color:#858888;
+}
+
+.institution p {
+	display: flex;
+	margin: 0;
+	color:#858888;
+}
+
+.institution a {
+	color: rgb(39, 216, 83);
+	text-decoration: none;
+}
+
+
+
+.institution .img_img img {
+	display: flex;
+	border-radius: 20px;
+	border: 4px solid #59f06d;
+	width: 250px;
+	margin-top: 30px;
+	margin-right: 12px;
+}
+
+#button {
+	display: flex;
+}
+
+#button .new {
+  width: 100%;
+	height: 64px;
+	margin-top: 20px;
+  border: 0;
+  cursor: pointer;
+  background: #d8cdcd;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button .delete {
+  width: 100%;
+	height: 64px;
+
+	margin-top: 10px;
+  border: 0;
+  cursor: pointer;
+  background: #d8cdcd;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button .logout {
+  width: 100%;
+	height: 64px;
+
+	margin-top: 10px;
+  border: 0;
+  cursor: pointer;
+  background: #d8cdcd;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-weight: 800;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button .new svg {
+	margin: 10px;
+
+}
+
+#button .delete svg{
+	margin: 10px;
+}
+
+
+#button .new:hover{
+	background: #3de053
+}
+
+
+#button .delete:hover{
+	background: #e64747
+}
+
+
+
