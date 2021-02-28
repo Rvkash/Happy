@@ -9,7 +9,7 @@
 
 ## :blue_heart: Happy Version 2
 
-O Happy é um projeto que visa facilitar visitas aos Acolhimentos Institucionais próximos a você.
+O Happy é um projeto que visa facilitar visitas aos acolhimentos institucional próximos a você.
 
 Esse projeto foi desenvolvido durante a semana [NextLevelWeek](https://nextlevelweek.com/inscricao/3) da [Rocketseat](https://github.com/Rocketseat)
 
