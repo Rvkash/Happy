@@ -2,7 +2,7 @@
     <img src="https://i.ibb.co/Xk4S7kW/Logo.png" width="190" />
 </h1>
 
-<blockquote align="center">“Há coisas na vida que só dependem da nossa vontade, e ser criança é uma delas, Faça uma criança feliz!”</blockquote>
+<blockquote>“Há coisas na vida que só dependem da nossa vontade, e ser criança é uma delas, Faça uma criança feliz!”</blockquote>
 
 
 
